@@ -42,6 +42,20 @@ You can deploy your version of the application using Vercel just by clicking on 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Faave-dao%2Faave-governance-interface&env=WC_PROJECT_ID&envDescription=Environment%20variables%20needed%20to%20run%20the%20app&envLink=https%3A%2F%2Fgithub.com%2Faave-dao%2Faave-governance-interface%2Fblob%2Fmain%2F.env.example)
 
+### Deploy to IPFS
+
+1. Set the environment variable:
+   ```sh
+   export NEXT_PUBLIC_DEPLOY_FOR_IPFS=true
+   ```
+2. Build the static export:
+   ```sh
+   yarn && yarn build
+   ```
+   This produces a fully static site in the `./out` directory.
+3. Pin the `./out` directory to IPFS using a pinning service such as [Pinata](https://www.pinata.cloud/) or [Infura](https://www.infura.io/).
+
+A GitHub Actions workflow is also available at [`.github/workflows/ipfs_deploy.yml`](./.github/workflows/ipfs_deploy.yml) for automated IPFS deployments via Pinata. It can be triggered manually from the Actions tab and requires `PINATA_API_KEY` and `PINATA_SECRET_KEY` secrets to be configured in the repository.
 
 ## License
 
