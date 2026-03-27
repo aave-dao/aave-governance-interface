@@ -54,6 +54,19 @@ RPC URLs can also be changed directly in [`src/utils/chains.ts`](./src/utils/cha
 
 A GitHub Actions workflow is also available at [`.github/workflows/ipfs_deploy.yml`](./.github/workflows/ipfs_deploy.yml) for automated IPFS deployments via Pinata. It can be triggered manually from the Actions tab and requires `PINATA_API_KEY` and `PINATA_SECRET_KEY` secrets configured in the repository.
 
+## Governance cache
+
+The app relies on a governance cache to avoid fetching all proposal data directly from the blockchain. The cache provides pre-indexed proposal details, vote data, events, and IPFS metadata as static JSON files served from GitHub.
+
+To set up your own cache:
+
+1. Fork [aave-governance-cache](https://github.com/aave-dao/aave-governance-cache).
+2. Follow the setup and deployment guides in the forked repository.
+3. Point the app to your fork by setting `NEXT_PUBLIC_CACHE_URL`:
+   ```
+   NEXT_PUBLIC_CACHE_URL=https://raw.githubusercontent.com/<your-org>/aave-governance-cache/main/cache
+   ```
+
 ## Built with
 
 [React](https://react.dev/) | [Next.js](https://nextjs.org/) | [zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) | [viem](https://viem.sh/) | [wagmi](https://wagmi.sh/) | [MUI system](https://mui.com/system/getting-started/) | [Headless UI](https://headlessui.com/)
