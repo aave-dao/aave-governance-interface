@@ -42,11 +42,6 @@ You can deploy your version of the application using Vercel just by clicking on 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Faave-dao%2Faave-governance-interface&env=WC_PROJECT_ID&envDescription=Environment%20variables%20needed%20to%20run%20the%20app&envLink=https%3A%2F%2Fgithub.com%2Faave-dao%2Faave-governance-interface%2Fblob%2Fmain%2F.env.example)
 
-### Hosted version
-
-We have our own hosted version from Vercel, you can access it on [https://vote.onaave.com/](https://vote.onaave.com/)
-
-<br>
 
 ## License
 
