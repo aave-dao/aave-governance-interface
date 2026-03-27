@@ -5,8 +5,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  push:
-    branches: ['main']
+  workflow_dispatch: # manual trigger only — set NEXT_PUBLIC_DEPLOY_FOR_IPFS=true to enable
 
 env:
   NEXT_PUBLIC_DEPLOY_FOR_IPFS: true
