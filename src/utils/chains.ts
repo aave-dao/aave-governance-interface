@@ -13,6 +13,7 @@ import {
   linea,
   mainnet,
   mantle,
+  monad,
   megaeth,
   metis,
   optimism,
@@ -128,6 +129,10 @@ export const initialRpcUrls: Record<number, string[]> = {
   [xLayer.id]: [
     process.env.NEXT_PUBLIC_RPC_XLAYER || 'https://rpc.xlayer.tech',
   ],
+  [monad.id]: [
+    process.env.NEXT_PUBLIC_RPC_MONAD || 'https://rpc.monad.xyz',
+    'https://rpc1.monad.xyz',
+  ],
   // testnets
   [sepolia.id]: [
     'https://eth-sepolia.public.blastapi.io',
@@ -196,6 +201,7 @@ export const CHAINS: Record<number, Chain> = {
   [ink.id]: setChain(ink),
   [mantle.id]: setChain(mantle),
   [megaeth.id]: setChain(megaeth),
+  [monad.id]: setChain(monad),
   [xLayer.id]: setChain(xLayer),
   // testnets
   [sepolia.id]: setChain(sepolia),
