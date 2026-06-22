@@ -11,6 +11,7 @@ import {
   goerli,
   mainnet,
   mantle,
+  monad,
   megaeth,
   metis,
   optimism,
@@ -57,6 +58,8 @@ const getAverageBlockTime = (chainId: number) => {
       return 2;
     case megaeth.id:
       return 2;
+    case monad.id:
+      return 3;
     case xLayer.id:
       return 3;
     default:

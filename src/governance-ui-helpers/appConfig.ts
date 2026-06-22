@@ -13,6 +13,7 @@ import {
   GovernanceV3Linea,
   GovernanceV3Mantle,
   GovernanceV3MegaEth,
+  GovernanceV3Monad,
   GovernanceV3Metis,
   GovernanceV3Optimism,
   GovernanceV3Plasma,
@@ -38,6 +39,7 @@ import {
   mainnet,
   mantle,
   megaeth,
+  monad,
   metis,
   optimism,
   plasma,
@@ -175,6 +177,10 @@ export const payloadsControllerConfig: Record<
       dataHelperContractAddress: GovernanceV3XLayer.PC_DATA_HELPER,
       contractAddresses: [GovernanceV3XLayer.PAYLOADS_CONTROLLER],
     },
+    [monad.id]: {
+      dataHelperContractAddress: GovernanceV3Monad.PC_DATA_HELPER,
+      contractAddresses: [GovernanceV3Monad.PAYLOADS_CONTROLLER],
+    },
   },
   // testnets
   sepolia: {
@@ -266,6 +272,7 @@ export const payloadsControllerChainIds: Record<CoreNetworkName, number[]> = {
     linea.id,
     mantle.id,
     megaeth.id,
+    monad.id,
     sonic.id,
     celo.id,
     soneium.id,
