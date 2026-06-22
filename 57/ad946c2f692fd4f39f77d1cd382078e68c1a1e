@@ -1,0 +1,42 @@
+src/utils/chains.ts
+  h_739c25e72c37fb 16,132-133,135,204
+  s_598e862cda5884::t_53daa1c0b0fcee 134
+package.json
+  s_598e862cda5884::t_6b947a4409c12a 34
+src/governance-ui-helpers/appConfig.ts
+  h_739c25e72c37fb 16,42,180-183,275
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "57ad946c2f692fd4f39f77d1cd382078e68c1a1e",
+  "prompts": {
+    "4a7f47836764465a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "affd8160-17ae-4d13-8ced-3d63717bb3d4",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>",
+      "total_additions": 1528,
+      "total_deletions": 0,
+      "accepted_lines": 1528,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_598e862cda5884": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9bd17323-df7a-4aae-b917-e808832eed0e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
