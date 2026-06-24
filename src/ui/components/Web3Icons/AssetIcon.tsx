@@ -1,7 +1,7 @@
 'use client';
 
 import { Asset } from '../../../governance-ui-helpers';
-import { Web3Icon } from '@bgd-labs/react-web3-icons';
+import { Web3Icon } from '@aave-dao/react-web3-icons';
 import { Box, SxProps } from '@mui/system';
 
 import { CustomSkeleton } from '../CustomSkeleton';

@@ -1,5 +1,5 @@
 import { WalletType } from '@bgd-labs/frontend-web3-utils';
-import { getWeb3WalletName } from '@bgd-labs/react-web3-icons/dist/utils';
+import { getWeb3WalletName } from '@aave-dao/react-web3-icons/dist/utils';
 import { useEffect, useState } from 'react';
 
 import { useStore } from '../../../store/ZustandStoreProvider';
