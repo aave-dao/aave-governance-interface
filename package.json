@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "@aave-dao/aave-address-book": "^4.55.1",
+    "@aave-dao/react-web3-icons": "^1.52.2",
     "@bgd-labs/frontend-web3-utils": "1.4.1",
-    "@bgd-labs/react-web3-icons": "^1.59.0",
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.0",
     "@emotion/server": "^11.11.0",

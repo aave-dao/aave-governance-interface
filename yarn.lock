@@ -7,6 +7,15 @@
   resolved "https://registry.yarnpkg.com/@aave-dao/aave-address-book/-/aave-address-book-4.55.1.tgz#5c49a2102ae6848195c9181e652eae05e1739d18"
   integrity sha512-61qz4T51YrUNZRxMGjmgff+mJUr9IJ26sXO+KvoL0/rXP9oidumhA/ChXIDPHErzh5hG/qJSjxPZxqDytHoU3w==
 
+"@aave-dao/react-web3-icons@^1.52.2":
+  version "1.52.2"
+  resolved "https://registry.yarnpkg.com/@aave-dao/react-web3-icons/-/react-web3-icons-1.52.2.tgz#d3166e7e380900cf3ee437b2bd8704347c1b7447"
+  integrity sha512-fFoyoc1QMOrbbGUVIOgPPEdoPTseP9OXop0MxTQwNruNQ49wZtB0USVs2j8gbnw3YjS6BkoxFylFjBLwkXaCcg==
+  dependencies:
+    "@loadable/component" "5.16.4"
+    tailwind-merge "2.6.0"
+    to-words "4.1.0"
+
 "@adraffy/ens-normalize@^1.10.1", "@adraffy/ens-normalize@^1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@adraffy/ens-normalize/-/ens-normalize-1.11.0.tgz#42cc67c5baa407ac25059fcd7d405cc5ecdb0c33"
@@ -860,12 +869,17 @@
     "@babel/plugin-transform-modules-commonjs" "^7.25.9"
     "@babel/plugin-transform-typescript" "^7.25.9"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.12.18", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.18.3", "@babel/runtime@^7.19.4", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.18.3", "@babel/runtime@^7.19.4", "@babel/runtime@^7.21.0", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4":
   version "7.26.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.9.tgz#aa4c6facc65b9cb3f87d75125ffd47781b475433"
   integrity sha512-aA63XwOkcl4xxQa3HjPMqOP6LiK0ZDv3mUPYEFXkpHbaFjtGggE1A61FjFzJnB+p7/oy2gA8E+rcBNl/zC1tMg==
   dependencies:
     regenerator-runtime "^0.14.0"
+
+"@babel/runtime@^7.12.18":
+  version "7.29.7"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.7.tgz#12022450c45a4da6d8d8287b18a4ff2ddb23f768"
+  integrity sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==
 
 "@babel/runtime@^7.25.0":
   version "7.28.6"
@@ -926,15 +940,6 @@
     "@tanstack/react-query" "^5.51.11"
     dayjs "^1.11.12"
     viem "^2.46.3"
-
-"@bgd-labs/react-web3-icons@^1.59.0":
-  version "1.59.0"
-  resolved "https://registry.yarnpkg.com/@bgd-labs/react-web3-icons/-/react-web3-icons-1.59.0.tgz#9a117781eb2748e99f54853acae9395650d74acd"
-  integrity sha512-0VVHgyODNQhFh2Nioxdc/V7GerLXlFMArLbBOJYOheYRs6tA2EG894V53hvmMG24pbmP+9XM1XWzUUE3XabgGg==
-  dependencies:
-    "@loadable/component" "5.16.4"
-    tailwind-merge "2.6.0"
-    to-words "4.1.0"
 
 "@coinbase/cdp-sdk@^1.0.0":
   version "1.43.1"
