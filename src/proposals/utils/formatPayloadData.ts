@@ -4,7 +4,6 @@ import {
   ProposalHistoryItem,
 } from '../../governance-ui-helpers';
 import dayjs from 'dayjs';
-import { megaeth } from 'viem/chains';
 
 import { NewPayload } from '../../proposalCreateOverview/store/proposalCreateOverviewSlice';
 import { getHistoryId } from '../components/proposalHistory/helpers';
@@ -16,9 +15,7 @@ export const generateSeatbeltLink = (
   payload: NewPayload,
   startLink?: string,
 ) => {
-  const isForgeReport = payload.chainId === megaeth.id;
-
-  return `${startLink || seatbeltStartLink}${payload.chainId}/${payload.payloadsController}/${payload.id}${isForgeReport ? '_forge' : ''}.md`;
+  return `${startLink || seatbeltStartLink}${payload.chainId}/${payload.payloadsController}/${payload.id}.md`;
 };
 
 function getTxHashFromHistory({
