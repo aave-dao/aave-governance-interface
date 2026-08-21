@@ -185,21 +185,25 @@ function PayloadItem({
   useEffect(() => {
     if (!report) {
       const reportFromStore =
-        payloadsHelperData[`${payload.payloadsController}_${payload.id}`]
-          ?.seatbeltMD;
+        payloadsHelperData[
+          `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+        ]?.seatbeltMD;
       if (reportFromStore) {
         setFinalReport(reportFromStore);
       } else {
         getPayloadSeatbeltMD(payload);
         const reportFromStoreNew =
-          payloadsHelperData[`${payload.payloadsController}_${payload.id}`]
-            ?.seatbeltMD;
+          payloadsHelperData[
+            `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+          ]?.seatbeltMD;
         setFinalReport(reportFromStoreNew);
       }
     }
   }, [
     report,
-    payloadsHelperData[`${payload.payloadsController}_${payload.id}`],
+    payloadsHelperData[
+      `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+    ],
   ]);
 
   useEffect(() => {

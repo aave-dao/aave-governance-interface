@@ -123,7 +123,7 @@ export function ProposalCreateOverviewPage({
   const newIpfsDataError = ipfsDataErrors[initialParams.ipfsHash || ''];
   const payloads = initialParams.payloads.map((payload) => {
     return createPayloadsData[
-      `${payload.payloadsController}_${payload.payloadId}`
+      `${payload.chainId}_${payload.payloadsController}_${payload.payloadId}`
     ];
   });
 

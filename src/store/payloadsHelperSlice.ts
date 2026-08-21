@@ -20,11 +20,13 @@ export interface IPayloadsHelperSlice {
 
   payloadsHelperData: Record<string, PayloadHelperDataItem>;
   setPayloadsHelperData: ({
+    chainId,
     payloadsController,
     payloadId,
     seatbeltMD,
     proposalId,
   }: PayloadHelperDataItem & {
+    chainId: number;
     payloadsController: string;
     payloadId: number;
   }) => void;
@@ -62,22 +64,24 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
 
   payloadsHelperData: {},
   setPayloadsHelperData: ({
+    chainId,
     payloadsController,
     payloadId,
     seatbeltMD,
     proposalId,
   }) => {
+    const key = `${chainId}_${payloadsController}_${payloadId}`;
     set((state) =>
       produce(state, (draft) => {
         if (seatbeltMD) {
-          draft.payloadsHelperData[`${payloadsController}_${payloadId}`] = {
-            ...draft.payloadsHelperData[`${payloadsController}_${payloadId}`],
+          draft.payloadsHelperData[key] = {
+            ...draft.payloadsHelperData[key],
             seatbeltMD,
           };
         }
         if (!!proposalId || proposalId === 0) {
-          draft.payloadsHelperData[`${payloadsController}_${payloadId}`] = {
-            ...draft.payloadsHelperData[`${payloadsController}_${payloadId}`],
+          draft.payloadsHelperData[key] = {
+            ...draft.payloadsHelperData[key],
             proposalId,
           };
         }
@@ -87,7 +91,9 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
 
   getPayloadSeatbeltMD: async (payload) => {
     const payloadHelperData =
-      get().payloadsHelperData[`${payload.payloadsController}_${payload.id}`];
+      get().payloadsHelperData[
+        `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+      ];
 
     if (payloadHelperData && !!payloadHelperData.seatbeltMD) {
       return payloadHelperData.seatbeltMD;
@@ -101,6 +107,7 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
         if (response.ok) {
           const reportMD: string = await response.text();
           get().setPayloadsHelperData({
+            chainId: payload.chainId,
             payloadsController: payload.payloadsController,
             payloadId: payload.id,
             seatbeltMD: reportMD,
@@ -117,7 +124,9 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
 
   getPayloadProposalId: async (payload, withoutRequest) => {
     const payloadHelperData =
-      get().payloadsHelperData[`${payload.payloadsController}_${payload.id}`];
+      get().payloadsHelperData[
+        `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+      ];
 
     if (
       payloadHelperData &&
@@ -141,6 +150,7 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
             ? Number(proposalIdConnectedToPayload[0])
             : undefined;
         get().setPayloadsHelperData({
+          chainId: payload.chainId,
           payloadsController: payload.payloadsController,
           payloadId: payload.id,
           proposalId: proposalIdConnectedToPayloadFinal,
@@ -167,6 +177,7 @@ export const createPayloadsHelperSlice: StoreSlice<IPayloadsHelperSlice> = (
               ? Number(proposalIdConnectedToPayload[0])
               : undefined;
           get().setPayloadsHelperData({
+            chainId: payload.chainId,
             payloadsController: payload.payloadsController,
             payloadId: payload.id,
             proposalId: proposalIdConnectedToPayloadFinal,
