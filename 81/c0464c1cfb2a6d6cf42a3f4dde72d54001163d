@@ -1,0 +1,25 @@
+src/utils/configs.ts
+  s_13832f5617fab4::t_3a8f9528a1b465 6-8,11
+  s_13832f5617fab4::t_79fcbb8318bfa9 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "81c0464c1cfb2a6d6cf42a3f4dde72d54001163d",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_13832f5617fab4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be6a1678-584a-4d90-9aca-393f964129fa",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
