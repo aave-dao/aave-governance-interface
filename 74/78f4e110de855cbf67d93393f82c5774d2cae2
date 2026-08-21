@@ -1,0 +1,51 @@
+src/proposals/components/proposal/ProposalPageWrapperWithCache.tsx
+  s_caad267b4c51eb::t_b19381b453cb5e 52
+src/proposalCreateOverview/store/proposalCreateOverviewSlice.ts
+  s_caad267b4c51eb::t_f0ecf732e79a7f 137-139
+  s_caad267b4c51eb::t_26cf4551276ce1 207-212
+  s_caad267b4c51eb::t_03d664f2c4d1ca 56,60
+  s_caad267b4c51eb::t_f1d97e9e4fd71b 81
+  s_caad267b4c51eb::t_3ba7864a2d94bc 94-96
+src/proposals/components/proposal/ProposalPayloads.tsx
+  s_caad267b4c51eb::t_ae2b54cbf833c3 188-190,196-198,204-206
+src/proposals/components/proposal/ProposalPageWrapperSSR.tsx
+  s_caad267b4c51eb::t_481c80f05bd466 58
+src/store/payloadsHelperSlice.ts
+  s_caad267b4c51eb::t_bef0fc3f7f5bf6 23,29
+  s_caad267b4c51eb::t_60b9eca49b4f17 67,73,77-78,83-84
+  s_caad267b4c51eb::t_6ce2c846392f46 94-96
+  s_caad267b4c51eb::t_56762736c76da2 110
+  s_caad267b4c51eb::t_13d3affbef8252 127-129
+  s_caad267b4c51eb::t_d13689f8b04dd6 153
+  s_caad267b4c51eb::t_8511913b9b7d5e 180
+src/proposalCreateOverview/components/ProposalCreateOverviewPage.tsx
+  s_caad267b4c51eb::t_0f5147a81014e9 126
+src/payloadsExplorer/components/PayloadsExplorerPage.tsx
+  s_caad267b4c51eb::t_00da12f9177b94 264-266
+src/proposals/store/proposalsSlice.ts
+  s_caad267b4c51eb::t_70d7a18b039aa5 1475
+  s_caad267b4c51eb::t_d497e44f1c8b22 1464
+  s_caad267b4c51eb::t_786f1357243141 750
+  s_caad267b4c51eb::t_77278fcbf1cf83 451
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "7478f4e110de855cbf67d93393f82c5774d2cae2",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_caad267b4c51eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "125e705b-a143-4ca8-9f8f-4007ea3f6a72",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
