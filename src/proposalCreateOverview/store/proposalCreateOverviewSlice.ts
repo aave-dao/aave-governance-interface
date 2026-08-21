@@ -53,11 +53,11 @@ export const createProposalCreateOverviewSlice: StoreSlice<
         produce(state, (draft) => {
           const oldData =
             draft.createPayloadsData[
-              `${payload.payloadsController}_${payload.id}`
+              `${payload.chainId}_${payload.payloadsController}_${payload.id}`
             ];
 
           draft.createPayloadsData[
-            `${payload.payloadsController}_${payload.id}`
+            `${payload.chainId}_${payload.payloadsController}_${payload.id}`
           ] = {
             ...oldData,
             ...payload,
@@ -78,7 +78,7 @@ export const createProposalCreateOverviewSlice: StoreSlice<
     const initialData = initialPayloadsData.map((payload) => {
       const data =
         get().createPayloadsData[
-          `${payload.payloadsController}_${payload.payloadId}`
+          `${payload.chainId}_${payload.payloadsController}_${payload.payloadId}`
         ];
 
       if (data) {
@@ -91,8 +91,9 @@ export const createProposalCreateOverviewSlice: StoreSlice<
     const formattedPayloadsData: Record<string, NewPayload> = {};
     initialData.forEach((payload) => {
       if (payload) {
-        formattedPayloadsData[`${payload.payloadsController}_${payload.id}`] =
-          payload;
+        formattedPayloadsData[
+          `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+        ] = payload;
       }
     });
 
@@ -133,8 +134,9 @@ export const createProposalCreateOverviewSlice: StoreSlice<
         .flat()
         .flat()
         .forEach((payload) => {
-          formattedPayloadsData[`${payload.payloadsController}_${payload.id}`] =
-            payload;
+          formattedPayloadsData[
+            `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+          ] = payload;
         });
       get().setCreatePayloadsData(formattedPayloadsData);
     }
@@ -202,11 +204,12 @@ export const createProposalCreateOverviewSlice: StoreSlice<
 
       await Promise.all(
         updatedPayloadsData.map(async (payload) => {
-          formattedPayloadsData[`${payload.payloadsController}_${payload.id}`] =
-            {
-              ...payload,
-              proposalId: await get().getPayloadProposalId(payload),
-            };
+          formattedPayloadsData[
+            `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+          ] = {
+            ...payload,
+            proposalId: await get().getPayloadProposalId(payload),
+          };
         }),
       );
       get().setCreatePayloadsData(formattedPayloadsData);

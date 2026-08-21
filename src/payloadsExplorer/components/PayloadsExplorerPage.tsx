@@ -261,8 +261,9 @@ export function PayloadsExplorerPage() {
       [`${payload.payloadsController}_${payload.id}`]: true,
     });
     const reportFromStore =
-      payloadsHelperData[`${payload.payloadsController}_${payload.id}`]
-        ?.seatbeltMD;
+      payloadsHelperData[
+        `${payload.chainId}_${payload.payloadsController}_${payload.id}`
+      ]?.seatbeltMD;
     if (reportFromStore) {
       setFinalReport(reportFromStore);
       setIsSeatbeltModalOpen({

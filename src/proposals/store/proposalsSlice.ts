@@ -448,7 +448,7 @@ export const createProposalsSlice: StoreSlice<
           produce(state, (draft) => {
             payloadsData.forEach((payload) => {
               draft.detailedPayloadsData[
-                `${payload.payloadsController}_${payload.id}`
+                `${payload.chainId}_${payload.payloadsController}_${payload.id}`
               ] = payload as Draft<Payload>;
             });
           }),
@@ -747,7 +747,7 @@ export const createProposalsSlice: StoreSlice<
         const payloads = proposal.initialPayloads.map((payload) => {
           return {
             ...get().detailedPayloadsData[
-              `${payload.payloadsController}_${payload.id}`
+              `${payload.chainId}_${payload.payloadsController}_${payload.id}`
             ],
             id: payload.id,
             chainId: payload.chainId,
@@ -1461,7 +1461,7 @@ export const createProposalsSlice: StoreSlice<
       payloads.map(async (payload) => {
         let formattedPayload =
           get().detailedPayloadsData[
-            `${payload.payloadsController}_${payload.id}`
+            `${payload.chainId}_${payload.payloadsController}_${payload.id}`
           ];
 
         if (!formattedPayload) {
@@ -1472,7 +1472,7 @@ export const createProposalsSlice: StoreSlice<
           );
           formattedPayload =
             get().detailedPayloadsData[
-              `${payload.payloadsController}_${payload.id}`
+              `${payload.chainId}_${payload.payloadsController}_${payload.id}`
             ];
         }
 

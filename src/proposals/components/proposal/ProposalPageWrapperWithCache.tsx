@@ -49,7 +49,7 @@ export function ProposalPageWrapperWithCache({
         detailsData.payloads.forEach((payload) => {
           if (payload) {
             setDetailedPayloadsData(
-              `${payload.payloadsController}_${payload.id}`,
+              `${payload.chainId}_${payload.payloadsController}_${payload.id}`,
               payload,
             );
           }
