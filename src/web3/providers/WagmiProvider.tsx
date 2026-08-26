@@ -37,7 +37,7 @@ export default function WagmiProvider() {
             name: 'Aave governance',
             description:
               'User interface to interact with the Aave governance v3 smart contracts',
-            url: 'https://vote.onaave.com',
+            url: 'https://vote.tools.aave.com',
             icons: [
               'https://imagedelivery.net/_aTEfDRm7z3tKgu9JhfeKA/c54c2635-3522-4d32-0e97-2329a733ee00/lg',
             ],
