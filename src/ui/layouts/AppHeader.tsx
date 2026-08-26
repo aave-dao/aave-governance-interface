@@ -7,7 +7,6 @@ import Logo from '/public/images/logo.svg';
 
 import { selectIsRpcAppHasErrors } from '../../rpcSwitcher/store/rpcSwitcherSelectors';
 import { useStore } from '../../store/ZustandStoreProvider';
-import { isForIPFS, isTermsAndConditionsVisible } from '../../utils/appConfig';
 import { WalletWidget } from '../../web3/components/wallet/WalletWidget';
 import { BoxWith3D } from '../components/BoxWith3D';
 import { Link } from '../components/Link';
@@ -54,11 +53,9 @@ export function AppHeader() {
   const checkAppMode = useStore((store) => store.checkAppMode);
   const appMode = useStore((store) => store.appMode);
   const isModalOpen = useStore((store) => store.isModalOpen);
-  const isAppBlockedByTerms = useStore((store) => store.isAppBlockedByTerms);
   const isClickedOnStartButtonOnHelpModal = useStore(
     (store) => store.isClickedOnStartButtonOnHelpModal,
   );
-  const setIsTermModalOpen = useStore((store) => store.setIsTermModalOpen);
   const setIsRepresentationInfoModalOpen = useStore(
     (store) => store.setIsRepresentationInfoModalOpen,
   );
@@ -75,7 +72,6 @@ export function AppHeader() {
     }
     setMobileMenuOpen(true);
     setIsRepresentationInfoModalOpen(false);
-    setIsTermModalOpen(false);
     closeHelpModals();
   };
 
@@ -121,12 +117,7 @@ export function AppHeader() {
         component="header"
         sx={{
           position: 'sticky',
-          top:
-            scrollDirection === 'down'
-              ? isModalOpen || isAppBlockedByTerms
-                ? 0
-                : -82
-              : 0,
+          top: scrollDirection === 'down' ? (isModalOpen ? 0 : -82) : 0,
           pt: mobileMenuOpen ? 0 : 8,
           pb: mobileMenuOpen ? 0 : 8,
           zIndex: 110,
@@ -488,7 +479,6 @@ export function AppHeader() {
                       type="button"
                       onClick={() => {
                         closeHelpModals();
-                        setIsTermModalOpen(false);
                         setIsHelpModalOpen(true);
                         handleCloseMobileMenu();
                       }}
@@ -588,27 +578,6 @@ export function AppHeader() {
                   )}
                 </Box>
               </Link>
-              {!isForIPFS && isTermsAndConditionsVisible && (
-                <Box
-                  component="button"
-                  type="button"
-                  onClick={() => {
-                    closeHelpModals();
-                    setIsTermModalOpen(true);
-                    handleCloseMobileMenu();
-                  }}
-                  sx={{
-                    textAlign: 'left',
-                    color: '$textLight',
-                    mb: 14,
-                    display: 'block',
-                  }}>
-                  <Box sx={{ typography: 'body' }}>
-                    {texts.header.termsAndConditions}
-                  </Box>
-                </Box>
-              )}
-
               <AppModeSwitcher />
 
               <Box

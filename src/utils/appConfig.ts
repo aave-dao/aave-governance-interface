@@ -7,8 +7,6 @@ import {
 import { avalanche, goerli, polygon, sepolia } from 'viem/chains';
 
 export const isForIPFS = process.env.NEXT_PUBLIC_DEPLOY_FOR_IPFS === 'true';
-export const isTermsAndConditionsVisible =
-  process.env.NEXT_PUBLIC_TERMS_AND_CONDITIONS_VISIBLE === 'true';
 
 export const coreName: CoreNetworkName = 'mainnet';
 export const WC_PROJECT_ID =

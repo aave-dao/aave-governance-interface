@@ -9,5 +9,5 @@ export const ROUTES = {
   rpcSwitcher: '/rpc-switcher',
   proposalCreateOverview: '/proposal-create-overview',
   payloadsExplorer: '/payloads-explorer',
-  adi: 'https://adi.onaave.com/',
+  adi: 'https://adi.tools.aave.com/',
 };

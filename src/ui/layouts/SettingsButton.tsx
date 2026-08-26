@@ -8,7 +8,6 @@ import WarningIcon from '/public/images/icons/warningIcon.svg';
 
 import { selectIsRpcAppHasErrors } from '../../rpcSwitcher/store/rpcSwitcherSelectors';
 import { useStore } from '../../store/ZustandStoreProvider';
-import { isForIPFS, isTermsAndConditionsVisible } from '../../utils/appConfig';
 import { BoxWith3D, Divider, Link, ThemeSwitcher } from '../';
 import { IconBox } from '../primitives/IconBox';
 import { ROUTES } from '../utils/routes';
@@ -19,7 +18,6 @@ import { AppModeSwitcher } from './AppModeSwitcher';
 export function SettingsButton() {
   const theme = useTheme();
 
-  const setIsTermModalOpen = useStore((store) => store.setIsTermModalOpen);
   const rpcAppErrors = useStore((store) => store.rpcAppErrors);
   const isRpcHasError = useStore((store) => selectIsRpcAppHasErrors(store));
 
@@ -283,29 +281,6 @@ export function SettingsButton() {
                 </Box>
                 <Divider sx={{ mt: 8, mb: 14 }} />
                 <ThemeSwitcher />
-                {!isForIPFS && isTermsAndConditionsVisible && (
-                  <>
-                    <Divider sx={{ my: 14 }} />
-                    <Box
-                      component="button"
-                      type="button"
-                      onClick={() => {
-                        close();
-                        setIsTermModalOpen(true);
-                      }}
-                      sx={{
-                        textAlign: 'left',
-                        color: '$textDisabled',
-                        hover: {
-                          color: theme.palette.$textWhite,
-                        },
-                      }}>
-                      <Box sx={{ typography: 'buttonSmall' }}>
-                        {texts.header.termsAndConditions}
-                      </Box>
-                    </Box>
-                  </>
-                )}
               </BoxWith3D>
             </Menu.Items>
           </>

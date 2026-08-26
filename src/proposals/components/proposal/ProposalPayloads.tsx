@@ -313,7 +313,7 @@ function PayloadItem({
               </Box>
               <CopyAndExternalIconsSet
                 iconSize={12}
-                externalLink={`https://vote.onaave.com/payloads-explorer/?payloadId=${payload.id}&payloadChainId=${payload.chainId}&payloadsControllerAddress=${payload.payloadsController}`}
+                externalLink={`https://vote.tools.aave.com/payloads-explorer/?payloadId=${payload.id}&payloadChainId=${payload.chainId}&payloadsControllerAddress=${payload.payloadsController}`}
                 sx={{ '.CopyAndExternalIconsSet__link': { ml: 4 } }}
               />
             </Box>

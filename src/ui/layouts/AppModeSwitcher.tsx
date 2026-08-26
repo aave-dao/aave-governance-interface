@@ -28,7 +28,6 @@ export function AppModeSwitcher() {
   const appMode = useStore((store) => store.appMode);
   const setAppMode = useStore((store) => store.setAppMode);
   const closeHelpModals = useStore((store) => store.closeHelpModals);
-  const setIsTermModalOpen = useStore((store) => store.setIsTermModalOpen);
   const setIsHelpModalOpen = useStore((store) => store.setIsHelpModalOpen);
 
   return (
@@ -47,7 +46,6 @@ export function AppModeSwitcher() {
                 type="button"
                 onClick={() => {
                   closeHelpModals();
-                  setIsTermModalOpen(false);
                   setIsHelpModalOpen(false);
                   setAppMode(mode.mode);
                 }}

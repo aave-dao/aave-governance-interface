@@ -8,15 +8,12 @@ import {
   RepresentationFormData,
 } from '../../representations/store/representationsSlice';
 import { TransactionsSlice } from '../../transactions/store/transactionsSlice';
-import { isForIPFS, isTermsAndConditionsVisible } from '../../utils/appConfig';
 import {
   getLocalStorageAppMode,
   getLocalStorageGaslessVote,
-  getLocalStorageTermsAccept,
   getLocalStorageTutorialStartButtonClicked,
   setLocalStorageAppMode,
   setLocalStorageGaslessVote,
-  setLocalStorageTermsAccept,
   setLocalStorageTutorialStartButtonClicked,
 } from '../../utils/localStorage';
 import { getDelegateData } from '../helpModals/getDelegateData';
@@ -43,10 +40,6 @@ export interface IUISlice {
 
   isThemeSwitched: boolean;
   setIsThemeSwitched: () => void;
-
-  isAppBlockedByTerms: boolean;
-  checkIsAppBlockedByTerms: () => void;
-  setIsTermsAccept: (value: boolean) => void;
 
   appMode: AppModeType;
   checkAppMode: () => void;
@@ -195,9 +188,6 @@ export interface IUISlice {
   isRpcSwitcherChangedView: boolean;
   setIsRpcSwitcherChangedView: (value: boolean) => void;
 
-  isTermModalOpen: boolean;
-  setIsTermModalOpen: (value: boolean) => void;
-
   isRepresentationInfoModalOpen: boolean;
   setIsRepresentationInfoModalOpen: (value: boolean) => void;
 
@@ -240,25 +230,6 @@ export const createUISlice: StoreSlice<
   setIsThemeSwitched: () => {
     set({ isThemeSwitched: true });
     setTimeout(() => set({ isThemeSwitched: false }), 100);
-  },
-
-  isAppBlockedByTerms: false,
-  checkIsAppBlockedByTerms: () => {
-    if (
-      getLocalStorageTermsAccept() !== 'true' &&
-      !isForIPFS &&
-      isTermsAndConditionsVisible
-    ) {
-      set({ isAppBlockedByTerms: true });
-    } else {
-      set({ isAppBlockedByTerms: false });
-    }
-  },
-  setIsTermsAccept: (value: boolean) => {
-    if (value) {
-      setLocalStorageTermsAccept('true');
-      set({ isAppBlockedByTerms: false });
-    }
   },
 
   appMode: 'default',
@@ -731,11 +702,6 @@ export const createUISlice: StoreSlice<
   isRpcSwitcherChangedView: false,
   setIsRpcSwitcherChangedView: (value) => {
     set({ isRpcSwitcherChangedView: value });
-  },
-
-  isTermModalOpen: false,
-  setIsTermModalOpen: (value) => {
-    set({ isModalOpen: value, isTermModalOpen: value });
   },
 
   isRepresentationInfoModalOpen: false,

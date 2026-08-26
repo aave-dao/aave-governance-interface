@@ -23,7 +23,6 @@ export const texts = {
       'Proposal can be closed because the proposition power of the creator is not enough',
     detailsLinkForumDiscussion: 'Forum discussion',
     detailsLinkSnapshotVoting: 'Snapshot voting',
-    detailsLinkBGDReport: 'BGD Report',
     detailsLinkSeatbeltReport: 'Seatbelt report',
     detailsShareTwitter: 'Share on X',
     detailsRawIpfs: 'Raw-Ipfs',
@@ -280,7 +279,6 @@ export const texts = {
     navForum: 'Visit forum',
     navTutorial: 'Tutorial',
     navCreate: 'Create',
-    termsAndConditions: 'Terms and conditions',
     changeRPC: 'Change RPC',
     appMode: 'App mode',
     theme: 'Theme',
@@ -361,13 +359,6 @@ export const texts = {
     noPayloadsInController:
       'There are no payloads created in this payloads controller yet',
     details: 'Details',
-  },
-  terms: {
-    description:
-      'By proceeding, you agree to our Terms & Conditions. We encourage you to read them carefully to ensure that you understand your rights and obligations.',
-    checkBoxLabel: 'I have read and accept the',
-    terms: 'Terms & Conditions',
-    buttonTitle: 'Proceed',
   },
   faq: {
     welcome: {

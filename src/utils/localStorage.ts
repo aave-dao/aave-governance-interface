@@ -13,7 +13,6 @@ export enum LocalStorageKeys {
   RpcUrls = 'rpcs_urls_6',
   RepresentingAddresses = 'representingAddresses',
   GaslessVote = 'isGaslessVote',
-  TermsAccept = 'termsAccept',
   AppMode = 'appMode',
   TutorialStartButtonClicked = 'tutorialStartButtonClicked',
   PayloadsExplorerView = 'payloadsExplorerView',
@@ -79,14 +78,6 @@ export const getLocalStorageGaslessVote = () => {
 
 export const setLocalStorageGaslessVote = (value: IsGaslessVote) => {
   return localStorage?.setItem(LocalStorageKeys.GaslessVote, value);
-};
-
-export const getLocalStorageTermsAccept = () => {
-  return localStorage?.getItem(LocalStorageKeys.TermsAccept);
-};
-
-export const setLocalStorageTermsAccept = (value: string) => {
-  return localStorage?.setItem(LocalStorageKeys.TermsAccept, value);
 };
 
 export const getLocalStorageAppMode = () => {
