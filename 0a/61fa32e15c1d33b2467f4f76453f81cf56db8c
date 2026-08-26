@@ -1,0 +1,38 @@
+package.json
+  s_59ac073ea85ab1::t_0390ad32f7fa8c 5
+src/ui/components/TermsAndConditionsModal.tsx
+  s_59ac073ea85ab1::t_2046d2e02fcd42 65-66
+  s_59ac073ea85ab1::t_bed3d7f909293e 72-74
+  s_59ac073ea85ab1::t_365425b80a8b88 235
+  s_59ac073ea85ab1::t_6a2dd0b9c556f6 368
+  s_59ac073ea85ab1::t_26dd780ae22e21 356,358
+  s_59ac073ea85ab1::t_58a3bed0708dbf 388
+  s_59ac073ea85ab1::t_96abde205cfd4a 379
+  s_59ac073ea85ab1::t_3276b803e78510 432,434
+  s_59ac073ea85ab1::t_e2c1f8751c3760 49-50
+  s_59ac073ea85ab1::t_b9a35d118f54ad 196
+  s_59ac073ea85ab1::t_8eea9a76887dd6 241
+  s_59ac073ea85ab1::t_7bebb7b975133f 226
+  s_59ac073ea85ab1::t_af2288997f833b 373
+src/ui/components/Branding.tsx
+  s_59ac073ea85ab1::t_04f5535f45a8cf 49
+  s_59ac073ea85ab1::t_e4ccfef7de4761 11,15
+README.md
+  s_59ac073ea85ab1::t_e9186a6ba2829e 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "0a61fa32e15c1d33b2467f4f76453f81cf56db8c",
+  "prompts": {},
+  "sessions": {
+    "s_59ac073ea85ab1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df3338f7-a5de-4ffa-93b8-6f0315356e7f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
