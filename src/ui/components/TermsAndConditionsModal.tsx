@@ -46,8 +46,8 @@ export function TermsAndConditionsModal() {
       <Text>Welcome to the Aave Governance V3 user interface.</Text>
       <Text>Effective Date: September 14, 2023</Text>
       <Text>
-        The Aave Governance V3 user interface is brought to you by BGD Labs
-        Technologies LLC (“BGD Labs Technologies”, “we,” “us,” or “our”). By
+        The Aave Governance V3 user interface is brought to you for the Aave
+        DAO by Aave Labs (“Aave Labs”, “we,” “us,” or “our”). By
         accessing or using our interface, you agree to comply with and be bound
         by the following Terms and Conditions (the "Agreement"). Please read
         this Agreement carefully before using our interface.
@@ -62,16 +62,16 @@ export function TermsAndConditionsModal() {
       <Text>
         By accessing or using the Aave Governance V3 interface, you acknowledge
         that you have read and agree to this Agreement, and that you have the
-        legal capacity to enter into a binding agreement with BGD Labs
-        Technologies LLC. If you do not meet the eligibility requirements to
+        legal capacity to enter into a binding agreement with Aave Labs. If
+        you do not meet the eligibility requirements to
         enter into a binding agreement, you must not access or use our
         interface.
       </Text>
       <Box sx={{ typography: 'h2', mb: 20 }}>3. Who We Are</Box>
       <Text>
-        BGD Labs Technologies is a software development venture in the
-        blockchain field, specialised in DeFi and design of other types of
-        decentralised protocols.
+        Aave Labs is a software development venture in the blockchain field,
+        specialised in DeFi and design of other types of decentralised
+        protocols.
       </Text>
       <Box sx={{ typography: 'h2', mb: 20 }}>
         4. Our Professional Engagement with the Aave DAO
@@ -193,7 +193,7 @@ export function TermsAndConditionsModal() {
       </Text>
       <Box sx={{ typography: 'h2', mb: 20 }}>10. Non-Profit Declaration</Box>
       <Text>
-        BGD Labs Technologies hereby declares that it does not benefit in any
+        Aave Labs hereby declares that it does not benefit in any
         way, financially or otherwise, from the Aave Governance V3 or this
         interface used to interact with them. Our engagement with the DAO is
         solely focused on providing software development services for the Aave
@@ -223,7 +223,7 @@ export function TermsAndConditionsModal() {
         interacting with the Aave Governance V3 smart contracts deployed on the
         Ethereum blockchain. The interface is not intended to provide, and
         should not be considered as, financial or investment advice or services.
-        BGD Labs Technologies is not a financial institution and does not
+        Aave Labs is not a financial institution and does not
         provide any financial or investment services through the interface. The
         interface with the Aave Governance V3 smart contracts is not intended to
         be used for any financial or investment purposes.
@@ -232,13 +232,13 @@ export function TermsAndConditionsModal() {
         13. Non-Responsibility of Third-Party Services
       </Box>
       <Text>
-        BGD Labs Technologies is not responsible for any third-party services
+        Aave Labs is not responsible for any third-party services
         used by users in connection with our interface, including but not
         limited to wallets, nodes, or other technologies used to interact with
         the Ethereum blockchain. We make no representations or warranties
         concerning the security, functionality, or availability of any
         third-party services, and users assume all risks associated with the use
-        of such services. BGD Labs Technologies is not responsible for any
+        of such services. Aave Labs is not responsible for any
         losses, damages, or liabilities arising from the use of third-party
         services in connection with our interface.
       </Text>
@@ -353,9 +353,9 @@ export function TermsAndConditionsModal() {
         The Intellectual property rights clause can be accessed here:{' '}
         <Link
           inNewWindow
-          href="https://github.com/bgd-labs/aave-governance-v3-frontend/blob/main/LICENSE"
+          href="https://github.com/aave-dao/aave-governance-interface/blob/main/LICENSE"
           css={{ textDecoration: 'underline', hover: { opacity: 0.7 } }}>
-          https://github.com/bgd-labs/aave-governance-v3-frontend/blob/main/LICENSE
+          https://github.com/aave-dao/aave-governance-interface/blob/main/LICENSE
         </Link>
         .
       </Text>
@@ -365,19 +365,18 @@ export function TermsAndConditionsModal() {
         software and the authorship, systems, ideas, methods of operation,
         documentation and other information contained in the software, are
         proprietary intellectual property and/or the valuable trade secrets of
-        BGD Labs Technologies and that we are protected by the UAE Copyrights
-        Law.
+        Aave Labs and that we are protected by applicable copyright laws.
       </Text>
       <Text>
         You acknowledge that these Terms do not grant you any intellectual
         property rights whatsoever in the interface and its related software and
-        all rights are reserved by BGD Labs Technologies.
+        all rights are reserved by Aave Labs.
       </Text>
       <Box sx={{ typography: 'h2', mb: 20 }}>16. No Investment Advice</Box>
       <Text>
         This application and any information provided through it are not
         intended to be and do not constitute investment advice, financial
-        advice, trading advice, or any other advice. BGD Labs Technologies does
+        advice, trading advice, or any other advice. Aave Labs does
         not provide any investment advice or recommendations regarding any
         digital assets or cryptocurrencies. The information provided is solely
         for informational purposes and is not to be relied upon for any purpose.
@@ -386,7 +385,7 @@ export function TermsAndConditionsModal() {
       </Text>
       <Box sx={{ typography: 'h2', mb: 20 }}>17. NO WARRANTIES</Box>
       <Text>
-        THE AAVE GOVERNANCE V3 INTERFACE BY BGD LABS TECHNOLOGIES IS PROVIDED
+        THE AAVE GOVERNANCE V3 INTERFACE BY AAVE LABS IS PROVIDED
         "AS IS" AND "AS AVAILABLE," WITHOUT ANY REPRESENTATIONS OR WARRANTIES OF
         ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. WE SPECIFICALLY
         DISCLAIM ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
@@ -430,9 +429,9 @@ export function TermsAndConditionsModal() {
         If you have any questions or concerns about this Agreement or any of our
         Products, please contact us at{' '}
         <Link
-          href="mailto:hi@bgdlabs.com"
+          href="mailto:wecare@aave.com"
           css={{ textDecoration: 'underline', hover: { opacity: 0.7 } }}>
-          hi@bgdlabs.com
+          wecare@aave.com
         </Link>
         .
       </Text>

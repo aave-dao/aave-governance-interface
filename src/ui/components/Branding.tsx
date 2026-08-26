@@ -8,11 +8,11 @@ import { Link } from './Link';
 
 const brandingLinks = [
   {
-    href: 'https://twitter.com/bgdlabs',
+    href: 'https://x.com/aave',
     icon: XIcon,
   },
   {
-    href: 'https://bgdlabs.com',
+    href: 'https://aave.com',
     icon: WebIcon,
   },
 ];
@@ -46,7 +46,7 @@ export function Branding() {
             color: '$textDisabled',
             [theme.breakpoints.up('sm')]: { mr: 6 },
           }}>
-          by BGD Labs
+          for Aave DAO
         </Box>
         <Box
           sx={{

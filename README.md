@@ -2,7 +2,7 @@
 
 <img src="./public/metaLogo.jpg" alt="Aave Governance v3" width="100%" height="70%">
 
-React application to interact with the Aave Governance V3 smart contracts.
+React application to interact with the Aave Governance V3 smart contracts. Built for the Aave DAO and maintained by [Aave Labs](https://aave.com).
 
 ## Setup
 

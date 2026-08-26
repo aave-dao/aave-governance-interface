@@ -23,7 +23,6 @@ export const texts = {
       'Proposal can be closed because the proposition power of the creator is not enough',
     detailsLinkForumDiscussion: 'Forum discussion',
     detailsLinkSnapshotVoting: 'Snapshot voting',
-    detailsLinkBGDReport: 'BGD Report',
     detailsLinkSeatbeltReport: 'Seatbelt report',
     detailsShareTwitter: 'Share on X',
     detailsRawIpfs: 'Raw-Ipfs',
