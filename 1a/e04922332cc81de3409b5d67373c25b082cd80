@@ -1,0 +1,33 @@
+src/ui/layouts/AppLayout.tsx
+  s_59ac073ea85ab1::t_d89db00ddcd243 12
+src/ui/layouts/AppHeader.tsx
+  s_59ac073ea85ab1::t_6f068bd3580854 120
+README.md
+  s_59ac073ea85ab1::t_28ff3787b622f8 5
+src/utils/isSafeHref.ts
+  s_598e862cda5884::t_8f1861f0720cb5 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "1ae04922332cc81de3409b5d67373c25b082cd80",
+  "prompts": {},
+  "sessions": {
+    "s_598e862cda5884": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9bd17323-df7a-4aae-b917-e808832eed0e",
+        "model": "unknown"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    },
+    "s_59ac073ea85ab1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df3338f7-a5de-4ffa-93b8-6f0315356e7f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
