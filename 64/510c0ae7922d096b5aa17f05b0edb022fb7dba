@@ -1,0 +1,19 @@
+src/ui/components/TermsAndConditionsModal.tsx
+  s_59ac073ea85ab1::t_cab75a3a2b6305 49-50,65-66,72-74,196,226,235,241,368-369,374,380,389
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "64510c0ae7922d096b5aa17f05b0edb022fb7dba",
+  "prompts": {},
+  "sessions": {
+    "s_59ac073ea85ab1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df3338f7-a5de-4ffa-93b8-6f0315356e7f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
