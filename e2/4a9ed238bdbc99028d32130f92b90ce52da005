@@ -1,0 +1,23 @@
+src/proposals/components/proposal/ProposalPayloads.tsx
+  s_59ac073ea85ab1::t_fcde5892647260 316
+src/ui/utils/routes.ts
+  s_59ac073ea85ab1::t_1d1cbbca1cf3e8 12
+src/web3/providers/WagmiProvider.tsx
+  s_59ac073ea85ab1::t_477a8b14440f0f 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "e24a9ed238bdbc99028d32130f92b90ce52da005",
+  "prompts": {},
+  "sessions": {
+    "s_59ac073ea85ab1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "df3338f7-a5de-4ffa-93b8-6f0315356e7f",
+        "model": "claude-fable-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
