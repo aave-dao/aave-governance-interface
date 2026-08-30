@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2026-03-27)
+
+
+### Features
+
+* initial commit ([34fbcc2](https://github.com/bgd-labs/aave-governance-interface/commit/34fbcc2a461d6be9d184c40e3661c0ddd13fc4c2))
+
 ## [2.3.4](https://github.com/bgd-labs/aave-governance-v3-interface/compare/v2.3.3...v2.3.4) (2024-07-24)
 
 
