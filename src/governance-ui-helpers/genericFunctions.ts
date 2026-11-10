@@ -16,6 +16,26 @@ export function getLink(hash: string, gateway: string): string {
   return `${gateway}/${hash}`;
 }
 
+// gray-matter eval()s `---js` front matter; IPFS metadata is attacker-controlled
+const rejectJsFrontMatter = () => {
+  throw new Error('JavaScript front matter is not allowed');
+};
+export function parseFrontMatter(input: string) {
+  return matter(input, {
+    engines: { js: rejectJsFrontMatter, javascript: rejectJsFrontMatter },
+  });
+}
+
+export function toHttpUrl(value: unknown): string | undefined {
+  if (typeof value !== 'string') return undefined;
+  try {
+    const { protocol } = new URL(value);
+    return protocol === 'https:' || protocol === 'http:' ? value : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export async function getProposalMetadataBase({
   ipfsHash,
   ipfsResponse,
@@ -27,24 +47,24 @@ export async function getProposalMetadataBase({
 
   try {
     const response = await ipfsResponse.json();
-    const { content, data } = matter(response.description);
+    const { content, data } = parseFrontMatter(response.description);
     return {
       title: data.title ?? response.title ?? '',
       author: data.author ?? response.author ?? '',
-      discussions: data.discussions ?? response.discussions ?? '',
-      snapshot: data.snapshot ?? response.snapshot,
+      discussions: toHttpUrl(data.discussions ?? response.discussions) ?? '',
+      snapshot: toHttpUrl(data.snapshot ?? response.snapshot),
       ipfsHash,
       description: content,
     };
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
-    const parsed = matter(await clone.text());
+    const parsed = parseFrontMatter(await clone.text());
     const fm = parsed.data as Record<string, string>;
     return {
       title: fm.title ?? '',
       author: fm.author ?? '',
-      discussions: fm.discussions ?? '',
-      snapshot: fm.snapshot,
+      discussions: toHttpUrl(fm.discussions) ?? '',
+      snapshot: toHttpUrl(fm.snapshot),
       ipfsHash,
       description: parsed.content,
     };

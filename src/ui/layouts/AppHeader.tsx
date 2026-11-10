@@ -44,7 +44,7 @@ export function AppHeader() {
   const path = usePathname();
 
   const sm = useMediaQuery(media.sm);
-  const wrapperRef = useRef(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const isRendered = useStore((store) => store.isRendered);
   const setIsHelpModalOpen = useStore((store) => store.setIsHelpModalOpen);

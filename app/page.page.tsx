@@ -29,11 +29,10 @@ export interface PageServerSideData {
   proposals: FinishedProposalForList[];
 }
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export default async function Page(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const activePage = searchParams['activePage']
     ? Number(searchParams['activePage']) - 1
     : 0;

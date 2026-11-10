@@ -18,6 +18,17 @@ const BaseLink = styled('a')({
   textDecoration: 'none',
 });
 
+// URL parsing normalizes the same tricks browsers do (`java\tscript:`, leading whitespace)
+function hasSafeScheme(href: string) {
+  try {
+    return ['http:', 'https:', 'mailto:'].includes(
+      new URL(href, 'http://localhost').protocol,
+    );
+  } catch {
+    return false;
+  }
+}
+
 export function Link({
   href,
   inNewWindow,
@@ -44,7 +55,7 @@ export function Link({
 
   return (
     <>
-      {disabled ? (
+      {disabled || !hasSafeScheme(href) ? (
         <Box
           sx={{
             color: '$text',

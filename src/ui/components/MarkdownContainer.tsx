@@ -78,7 +78,7 @@ export function MarkdownContainer({
         rehypePlugins={[rehypeRaw, rehypeSanitize]}
         components={{
           img({ src: _src, alt }) {
-            if (!_src) return null;
+            if (typeof _src !== 'string' || !_src) return null;
             const src =
               /^\.\.\//.test(_src) && replaceImgSrc
                 ? _src.replace('../', replaceImgSrc)
