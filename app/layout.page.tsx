@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import React from 'react';
 
@@ -6,13 +5,6 @@ import { ZustandStoreProvider } from '../src/store/ZustandStoreProvider';
 import AppLayout from '../src/ui/layouts/AppLayout';
 import ThemeRegistry from '../src/ui/utils/ThemeRegistry';
 import WagmiProvider from '../src/web3/providers/WagmiProvider';
-
-export const interNextFont = Inter({
-  weight: ['300', '400', '600', '700', '800'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata = {
   metadataBase: process.env.VERCEL_URL

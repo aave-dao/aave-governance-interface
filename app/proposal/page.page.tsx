@@ -27,13 +27,12 @@ import { IGovernanceCore_ABI } from '../../src/web3/abis/IGovernanceCore';
 export const revalidate = 0;
 
 type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export async function generateMetadata({
-  searchParams,
-}: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const searchParams = await props.searchParams;
   const proposalId = searchParams['proposalId']
     ? String(searchParams['proposalId'])
     : undefined;
@@ -78,11 +77,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProposalPage({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+export default async function ProposalPage(props: Props) {
+  const searchParams = await props.searchParams;
   // params
   const proposalId = searchParams['proposalId']
     ? String(searchParams['proposalId'])

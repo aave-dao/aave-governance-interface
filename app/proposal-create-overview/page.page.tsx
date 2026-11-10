@@ -19,11 +19,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ProposalCreateOverview({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export default async function ProposalCreateOverview(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   // params
   const proposalId = searchParams['proposalId']
     ? (Number(searchParams['proposalId']) as number)
