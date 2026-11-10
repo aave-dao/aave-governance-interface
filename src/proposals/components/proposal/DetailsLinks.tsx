@@ -3,6 +3,7 @@ import React from 'react';
 
 import LinkIcon from '/public/images/icons/linkIcon.svg';
 
+import { toHttpUrl } from '../../../governance-ui-helpers';
 import { useStore } from '../../../store/ZustandStoreProvider';
 import { Link, NoSSR } from '../../../ui';
 import { CustomSkeleton } from '../../../ui/components/CustomSkeleton';
@@ -25,17 +26,21 @@ export function DetailsLinks({
   const isRendered = useStore((store) => store.isRendered);
   const theme = useTheme();
 
+  // cached details from GitHub skip the IPFS metadata parsers
+  const snapshotUrl = toHttpUrl(snapshot);
+  const discussionUrl = toHttpUrl(discussionLink);
+
   const links = [];
-  if (snapshot) {
+  if (snapshotUrl) {
     links.unshift({
       title: texts.proposals.detailsLinkSnapshotVoting,
-      link: snapshot,
+      link: snapshotUrl,
     });
   }
-  if (!!discussionLink) {
+  if (discussionUrl) {
     links.unshift({
       title: texts.proposals.detailsLinkForumDiscussion,
-      link: discussionLink,
+      link: discussionUrl,
     });
   }
   if (!!prerender) {
