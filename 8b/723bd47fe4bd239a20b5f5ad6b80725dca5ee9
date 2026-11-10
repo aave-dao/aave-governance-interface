@@ -1,0 +1,25 @@
+src/governance-ui-helpers/genericFunctions.ts
+  s_969b201ab69b64::t_98748586dbee97 19-38,50,54-55,61,66-67
+src/proposals/components/proposal/DetailsLinks.tsx
+  s_969b201ab69b64::t_3b5f23b6be42b8 6,29-32,34,37,40,43
+src/ui/components/Link.tsx
+  s_969b201ab69b64::t_3b5f23b6be42b8 21-31,58
+src/utils/getProposalMetadata.ts
+  s_969b201ab69b64::t_98748586dbee97 3,5,23,27-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b723bd47fe4bd239a20b5f5ad6b80725dca5ee9",
+  "prompts": {},
+  "sessions": {
+    "s_969b201ab69b64": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42f9a391-bc4c-4d15-b593-ab421f82c353",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
